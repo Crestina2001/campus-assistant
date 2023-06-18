@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtCore import QTimer, pyqtSignal
 from PyQt5.QtWidgets import QGraphicsPixmapItem
 from PyQt5 import QtGui
+from datetime import datetime
 
 
 class Attention(QtWidgets.QDialog):
@@ -18,7 +19,9 @@ class Attention(QtWidgets.QDialog):
         self.start_button = self.findChild(QtWidgets.QPushButton, 'attention_start')
         self.suspend_button = self.findChild(QtWidgets.QPushButton, 'suspend')
         self.exit_button = self.findChild(QtWidgets.QPushButton, 'exit_attention')
-        self.timer_label = self.findChild(QtWidgets.QLabel, 'timer')  # 根据你的对象名称修改
+        self.timer_label = self.findChild(QtWidgets.QLabel, 'timer')
+
+        self.msg_window = self.findChild(QtWidgets.QLabel, 'msg_window')
 
         # 创建QTimer对象并连接到update_time方法
         self.timer = QTimer()
@@ -37,7 +40,7 @@ class Attention(QtWidgets.QDialog):
 
         # 在UI文件中找到名为'video'的QGraphicsView
         self.video_view = self.findChild(QtWidgets.QGraphicsView, 'video')
-        # ...
+
         # 创建一个新的QGraphicsScene来管理图像
         self.scene = QtWidgets.QGraphicsScene(self.video_view)
         self.video_view.setScene(self.scene)
@@ -76,6 +79,8 @@ class Attention(QtWidgets.QDialog):
 
         # 打开电脑摄像头
         self.cap = cv2.VideoCapture(0)
+        # 更新消息窗口
+        self.msg_window.setText("")
 
     def suspend_timer(self):
         if self.begin:
@@ -84,9 +89,7 @@ class Attention(QtWidgets.QDialog):
             self.suspend_button.setText('继续')
             # 停止摄像头，并释放资源
             self.camera_timer.stop()
-            #self.cap.release()
-            # 延迟
-            QTimer.singleShot(100, lambda: self.cap.release() if self.cap.isOpened() else None)
+            self.cap.release()
         else:
             self.timer.start(1000)  # 每秒更新一次
             self.begin = True
@@ -94,6 +97,8 @@ class Attention(QtWidgets.QDialog):
             # 重启摄像头
             self.camera_timer.start(1000 // self.FPS_setting)
             self.cap = cv2.VideoCapture(0)
+            # 更新消息窗口
+            self.msg_window.setText("")
 
     def update_time(self):
         self.time_remain -= 1  # 减少1秒
@@ -108,6 +113,13 @@ class Attention(QtWidgets.QDialog):
             self.time_is_up.emit()  # 发出时间结束的信号
 
     def time_up(self):
+        # 获取当前时间
+        current_time = datetime.now()
+
+        # 打开文件，并在文件末尾添加（'a' 表示 append，即追加模式）
+        with open('time_log.txt', 'a') as f:
+            # 写入当前时间
+            f.write(str(current_time) + '\n')
         QtWidgets.QMessageBox.information(self, "提示", "时间到了！")
 
     def update_camera(self):
@@ -131,6 +143,7 @@ class Attention(QtWidgets.QDialog):
             # 如果未检测到人，则暂停计时器；如果检测到人，则继续计时器
             if not person_detected and self.begin:
                 self.suspend_timer()
+                self.msg_window.setText("未检测到人，已自动暂停！")
                 return  # 如果未检测到人，则立即返回
             # 将颜色从BGR转换为RGB
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
