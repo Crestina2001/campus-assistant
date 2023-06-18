@@ -1,2 +1,0 @@
-# intelligent-album
-HCI final
