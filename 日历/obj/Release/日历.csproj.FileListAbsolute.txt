@@ -1,0 +1,16 @@
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\bin\Release\日历.exe.config
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\bin\Release\日历.exe
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\bin\Release\日历.pdb
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.csproj.AssemblyReference.cache
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.csproj.SuggestedBindingRedirects.cache
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.classes_picture_store.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.Form1.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.learning_yzx.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.Properties.Resources.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.Resource1.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.todo_wing.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.tree_show_wing.resources
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.csproj.GenerateResource.cache
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.csproj.CoreCompileInputs.cache
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.exe
+D:\杨政熹大学记录\大二下学期\课程文件\移动竞教结合课程\最最终极版本\日历\obj\Release\日历.pdb
