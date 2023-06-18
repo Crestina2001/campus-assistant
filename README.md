@@ -1,2 +1,2 @@
-# intelligent-album
+# Campus-assistant
 HCI final
