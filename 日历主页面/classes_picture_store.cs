@@ -31,7 +31,7 @@ namespace 日历
             this.DoubleBuffered = true;//双缓冲
             this.Text = "课程表";
             this.Size = new Size(1000, 600);//改变窗体的大小
-            this.BackgroundImage = Image.FromFile("calendar\\resource\\class_picture.jpg");
+            this.BackgroundImage = Image.FromFile("campus-assistant-main\\resource\\class_picture.jpg");
             this.BackgroundImageLayout = ImageLayout.Stretch;
             classes_picture.BackColor = Color.Transparent;
             classes_picture.Size = new Size(900, 500);
@@ -43,109 +43,109 @@ namespace 日历
         public String[] filePath = new String[]
         {
             //Monday
-            "calendar\\resource\\data\\course1_1_name.txt",
-            "calendar\\resource\\data\\course1_1_teacher.txt",
-            "calendar\\resource\\data\\course1_1_location.txt",
+            "campus-assistant-main\\resource\\data\\course1_1_name.txt",
+            "campus-assistant-main\\resource\\data\\course1_1_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course1_1_location.txt",
 
-            "calendar\\resource\\data\\course1_2_name.txt",
-            "calendar\\resource\\data\\course1_2_teacher.txt",
-            "calendar\\resource\\data\\course1_2_location.txt",
+            "campus-assistant-main\\resource\\data\\course1_2_name.txt",
+            "campus-assistant-main\\resource\\data\\course1_2_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course1_2_location.txt",
 
-            "calendar\\resource\\data\\course1_3_name.txt",
-            "calendar\\resource\\data\\course1_3_teacher.txt",
-            "calendar\\resource\\data\\course1_3_location.txt",
+            "campus-assistant-main\\resource\\data\\course1_3_name.txt",
+            "campus-assistant-main\\resource\\data\\course1_3_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course1_3_location.txt",
 
-            "calendar\\resource\\data\\course1_4_name.txt",
-            "calendar\\resource\\data\\course1_4_teacher.txt",
-            "calendar\\resource\\data\\course1_4_location.txt",
+            "campus-assistant-main\\resource\\data\\course1_4_name.txt",
+            "campus-assistant-main\\resource\\data\\course1_4_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course1_4_location.txt",
 
-            "calendar\\resource\\data\\course1_5_name.txt",
-            "calendar\\resource\\data\\course1_5_teacher.txt",
-            "calendar\\resource\\data\\course1_5_location.txt",
+            "campus-assistant-main\\resource\\data\\course1_5_name.txt",
+            "campus-assistant-main\\resource\\data\\course1_5_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course1_5_location.txt",
 
             //Tuesday
-            "calendar\\resource\\data\\course2_1_name.txt",
-            "calendar\\resource\\data\\course2_1_teacher.txt",
-            "calendar\\resource\\data\\course2_1_location.txt",
+            "campus-assistant-main\\resource\\data\\course2_1_name.txt",
+            "campus-assistant-main\\resource\\data\\course2_1_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course2_1_location.txt",
 
-            "calendar\\resource\\data\\course2_2_name.txt",
-            "calendar\\resource\\data\\course2_2_teacher.txt",
-            "calendar\\resource\\data\\course2_2_location.txt",
+            "campus-assistant-main\\resource\\data\\course2_2_name.txt",
+            "campus-assistant-main\\resource\\data\\course2_2_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course2_2_location.txt",
 
-            "calendar\\resource\\data\\course2_3_name.txt",
-            "calendar\\resource\\data\\course2_3_teacher.txt",
-            "calendar\\resource\\data\\course2_3_location.txt",
+            "campus-assistant-main\\resource\\data\\course2_3_name.txt",
+            "campus-assistant-main\\resource\\data\\course2_3_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course2_3_location.txt",
 
-            "calendar\\resource\\data\\course2_4_name.txt",
-            "calendar\\resource\\data\\course2_4_teacher.txt",
-            "calendar\\resource\\data\\course2_4_location.txt",
+            "campus-assistant-main\\resource\\data\\course2_4_name.txt",
+            "campus-assistant-main\\resource\\data\\course2_4_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course2_4_location.txt",
 
-            "calendar\\resource\\data\\course2_5_name.txt",
-            "calendar\\resource\\data\\course2_5_teacher.txt",
-            "calendar\\resource\\data\\course2_5_location.txt",
+            "campus-assistant-main\\resource\\data\\course2_5_name.txt",
+            "campus-assistant-main\\resource\\data\\course2_5_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course2_5_location.txt",
 
             //Wednesday
-            "calendar\\resource\\data\\course3_1_name.txt",
-            "calendar\\resource\\data\\course3_1_teacher.txt",
-            "calendar\\resource\\data\\course3_1_location.txt",
+            "campus-assistant-main\\resource\\data\\course3_1_name.txt",
+            "campus-assistant-main\\resource\\data\\course3_1_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course3_1_location.txt",
 
-            "calendar\\resource\\data\\course3_2_name.txt",
-            "calendar\\resource\\data\\course3_2_teacher.txt",
-            "calendar\\resource\\data\\course3_2_location.txt",
+            "campus-assistant-main\\resource\\data\\course3_2_name.txt",
+            "campus-assistant-main\\resource\\data\\course3_2_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course3_2_location.txt",
 
-            "calendar\\resource\\data\\course3_3_name.txt",
-            "calendar\\resource\\data\\course3_3_teacher.txt",
-            "calendar\\resource\\data\\course3_3_location.txt",
+            "campus-assistant-main\\resource\\data\\course3_3_name.txt",
+            "campus-assistant-main\\resource\\data\\course3_3_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course3_3_location.txt",
 
-            "calendar\\resource\\data\\course3_4_name.txt",
-            "calendar\\resource\\data\\course3_4_teacher.txt",
-            "calendar\\resource\\data\\course3_4_location.txt",
+            "campus-assistant-main\\resource\\data\\course3_4_name.txt",
+            "campus-assistant-main\\resource\\data\\course3_4_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course3_4_location.txt",
 
-            "calendar\\resource\\data\\course3_5_name.txt",
-            "calendar\\resource\\data\\course3_5_teacher.txt",
-            "calendar\\resource\\data\\course3_5_location.txt",
+            "campus-assistant-main\\resource\\data\\course3_5_name.txt",
+            "campus-assistant-main\\resource\\data\\course3_5_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course3_5_location.txt",
 
             //Thursday
-            "calendar\\resource\\data\\course4_1_name.txt",
-            "calendar\\resource\\data\\course4_1_teacher.txt",
-            "calendar\\resource\\data\\course4_1_location.txt",
+            "campus-assistant-main\\resource\\data\\course4_1_name.txt",
+            "campus-assistant-main\\resource\\data\\course4_1_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course4_1_location.txt",
 
-            "calendar\\resource\\data\\course4_2_name.txt",
-            "calendar\\resource\\data\\course4_2_teacher.txt",
-            "calendar\\resource\\data\\course4_2_location.txt",
+            "campus-assistant-main\\resource\\data\\course4_2_name.txt",
+            "campus-assistant-main\\resource\\data\\course4_2_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course4_2_location.txt",
 
-            "calendar\\resource\\data\\course4_3_name.txt",
-            "calendar\\resource\\data\\course4_3_teacher.txt",
-            "calendar\\resource\\data\\course4_3_location.txt",
+            "campus-assistant-main\\resource\\data\\course4_3_name.txt",
+            "campus-assistant-main\\resource\\data\\course4_3_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course4_3_location.txt",
 
-            "calendar\\resource\\data\\course4_4_name.txt",
-            "calendar\\resource\\data\\course4_4_teacher.txt",
-            "calendar\\resource\\data\\course4_4_location.txt",
+            "campus-assistant-main\\resource\\data\\course4_4_name.txt",
+            "campus-assistant-main\\resource\\data\\course4_4_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course4_4_location.txt",
 
-            "calendar\\resource\\data\\course4_5_name.txt",
-            "calendar\\resource\\data\\course4_5_teacher.txt",
-            "calendar\\resource\\data\\course4_5_location.txt",
+            "campus-assistant-main\\resource\\data\\course4_5_name.txt",
+            "campus-assistant-main\\resource\\data\\course4_5_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course4_5_location.txt",
 
             //Friday
-            "calendar\\resource\\data\\course5_1_name.txt",
-            "calendar\\resource\\data\\course5_1_teacher.txt",
-            "calendar\\resource\\data\\course5_1_location.txt",
+            "campus-assistant-main\\resource\\data\\course5_1_name.txt",
+            "campus-assistant-main\\resource\\data\\course5_1_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course5_1_location.txt",
 
-            "calendar\\resource\\data\\course5_2_name.txt",
-            "calendar\\resource\\data\\course5_2_teacher.txt",
-            "calendar\\resource\\data\\course5_2_location.txt",
+            "campus-assistant-main\\resource\\data\\course5_2_name.txt",
+            "campus-assistant-main\\resource\\data\\course5_2_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course5_2_location.txt",
 
-            "calendar\\resource\\data\\course5_3_name.txt",
-            "calendar\\resource\\data\\course5_3_teacher.txt",
-            "calendar\\resource\\data\\course5_3_location.txt",
+            "campus-assistant-main\\resource\\data\\course5_3_name.txt",
+            "campus-assistant-main\\resource\\data\\course5_3_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course5_3_location.txt",
 
-            "calendar\\resource\\data\\course5_4_name.txt",
-            "calendar\\resource\\data\\course5_4_teacher.txt",
-            "calendar\\resource\\data\\course5_4_location.txt",
+            "campus-assistant-main\\resource\\data\\course5_4_name.txt",
+            "campus-assistant-main\\resource\\data\\course5_4_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course5_4_location.txt",
 
-            "calendar\\resource\\data\\course5_5_name.txt",
-            "calendar\\resource\\data\\course5_5_teacher.txt",
-            "calendar\\resource\\data\\course5_5_location.txt",
+            "campus-assistant-main\\resource\\data\\course5_5_name.txt",
+            "campus-assistant-main\\resource\\data\\course5_5_teacher.txt",
+            "campus-assistant-main\\resource\\data\\course5_5_location.txt",
         };
         
         private Settings settings = new Settings();
