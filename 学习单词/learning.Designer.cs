@@ -86,7 +86,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(511, 135);
             this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+         
             // 
             // button4
             // 
@@ -134,7 +134,7 @@
             this.zcsn.Size = new System.Drawing.Size(29, 12);
             this.zcsn.TabIndex = 10;
             this.zcsn.Text = "zcsn";
-            this.zcsn.Click += new System.EventHandler(this.zcsn_Click);
+      
             // 
             // button3
             // 
@@ -201,7 +201,7 @@
             this.Controls.Add(this.button1);
             this.Name = "learning";
             this.Text = "我爱背单词";
-            this.Load += new System.EventHandler(this.Form1_Load);
+  
             this.ResumeLayout(false);
             this.PerformLayout();
 

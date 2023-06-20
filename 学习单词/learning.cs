@@ -14,7 +14,7 @@ namespace 日历
 {
     public partial class learning : Form
     {
-
+        //存储单词数据
         class MyData
         {
             private const string _ConString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=abcd.mdb";
@@ -65,7 +65,7 @@ namespace 日历
                 }
             }
         }
-
+        //对单词进行处理
         class WordProcessor
         {
             public List<string[]> words = new List<string[]>();
@@ -81,7 +81,7 @@ namespace 日历
                 totalWordCount = 0;
                 Initialize();
             }
-
+            //对单词进行初始化
             public void Initialize()
             {
                 totalWordCount = 0;
@@ -90,7 +90,7 @@ namespace 日历
                 MyData dataAccess = new MyData();
                 string sql = "SELECT * FROM words";
                 OleDbDataReader reader = dataAccess.select(sql);
-
+                //读取单词
                 while (reader.Read())
                 {
                     string[] word = new string[4];
@@ -105,7 +105,7 @@ namespace 日历
                 totalWordCount = words.Count;
                 wordsToReviewCount = totalWordCount;
             }
-
+            //获取下一个单词的索引
             public int GetNextWordIndex()
             {
                 DateTime now = DateTime.Now;
@@ -113,7 +113,7 @@ namespace 日历
                 double minProbability = 1;
                 int minIndex = 0;
                 wordsToReviewCount = 0;
-
+                //遍历words列表中的所有单词，计算每个单词的复习概率，然后选出概率最小的单词作为下一个要复习的单词。
                 for (int i = 0; i < totalWordCount; i++)
                 {
                     double timeElapsed = (currentTicks - Convert.ToDouble(words[i][3])) / ticksConversion;
@@ -139,19 +139,20 @@ namespace 日历
 
                 return minIndex;
             }
-         
+            //更新单词的强度
             public void UpdateWordStrength(int wordIndex, bool isKnown)
             {
                 double currentTicks = DateTime.Now.Ticks;
                 double timeElapsed = (currentTicks - Convert.ToDouble(words[wordIndex][3])) / ticksConversion;
                 double strength = Convert.ToDouble(words[wordIndex][2]);
                 double updatedStrength;
-
+                //如果用户认识该单词，减少单词的强度值
                 if (isKnown)
                 {
                     double newStrength = -Math.Log(lowerThreshold) / timeElapsed;
                     updatedStrength = Math.Min(newStrength, strength) / strengthMultiplier;
                 }
+                //如果用户不认识该单词，增加单词的强度值
                 else
                 {
                     double newStrength = -Math.Log(lowerThreshold) / timeElapsed;
@@ -165,7 +166,7 @@ namespace 日历
                 string sql = $"UPDATE words SET a='{updatedStrength}', t='{currentTicks}' WHERE key='{words[wordIndex][0]}'";
                 dataAccess.Update(sql);
             }
-
+            //添加单词
             public void AddNewWord(string key, string value)
             {
                 DateTime now = DateTime.Now;
@@ -180,7 +181,7 @@ namespace 日历
                 totalWordCount++;
                 
             }
-
+            //修改单词
             public void ModifyWord(string key, string value, int wordIndex)
             {
                 words[wordIndex][0] = key;
@@ -190,6 +191,7 @@ namespace 日历
                 string sql = $"UPDATE words SET val='{value}' WHERE key='{key}'";
                 dataAccess.Update(sql);
             }
+            //修改单词
             public void DeleteWord(string key, string value, int wordIndex)
             {
                 // 遍历列表，找到要删除的单词所在的索引
@@ -215,7 +217,7 @@ namespace 日历
             this.BackgroundImageLayout = ImageLayout.Stretch; // 设置背景图片自动适应
             Show();
         }
-
+        //展示单词
         void Show()
         {
             nextWordIndex = wordProcessor.GetNextWordIndex();
@@ -246,6 +248,7 @@ namespace 日历
             xyfxn.Text = wordProcessor.wordsToReviewCount.ToString();
             button1.Focus();
         }
+        //点击事件
         private void button2_Click(object sender, EventArgs e)
         {
             wordProcessor.UpdateWordStrength(nextWordIndex, false);
@@ -287,24 +290,6 @@ namespace 日历
             Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void zcsn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
        
     }
