@@ -13,6 +13,9 @@ using System.IO;
 using LiveCharts.Wpf.Charts.Base;
 using System.Windows.Media;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using LiveCharts.WinForms;
+using LiveCharts.Definitions.Charts;
+using static System.Drawing.Color;
 
 namespace 日历
 {
@@ -113,28 +116,32 @@ namespace 日历
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "今日",
-                Labels = new[] { "0点", "1点", "2点", "3点", "4点", "5点", "6点", "7点", "8点", "9点", "10点", "11点", "12点", "13点", "14点", "15点", "16点", "17点", "18点", "19点", "20点", "21点", "22点", "23点" }
+                Labels = new[] { "0点", "1点", "2点", "3点", "4点", "5点", "6点", "7点", "8点", "9点", "10点", "11点", "12点", "13点", "14点", "15点", "16点", "17点", "18点", "19点", "20点", "21点", "22点", "23点" },
+                Foreground = System.Windows.Media.Brushes.Black,
             }
-            );
+            ) ;
             cartesianChart1.AxisY.Add(new Axis
             {
                 Title = "专注时长（分钟）",
-                MinValue = 0
+                MinValue = 0,
+                Foreground = System.Windows.Media.Brushes.Black,
 
             });   
             cartesianChart1.Visible = true;
-
+            
 
             //cartesianChart2.Series.Add(weekSeries);
             cartesianChart2.AxisX.Add(new Axis
             {
                 Title = "过去七天",
-                Labels= new[] {"6天前","5天前","4天前","3天前","2天前","1天前","今天"}
+                Labels= new[] {"6天前","5天前","4天前","3天前","2天前","1天前","今天"},
+                Foreground = System.Windows.Media.Brushes.Black,
             });
             cartesianChart2.AxisY.Add(new Axis
             {
                 Title = "专注时长（分钟）",
-                MinValue = 0
+                MinValue = 0,
+                Foreground = System.Windows.Media.Brushes.Black,
 
             });
             cartesianChart2.Visible = false;
@@ -143,15 +150,18 @@ namespace 日历
             cartesianChart3.AxisX.Add(new Axis
             {
                 Title = "本月",
-                Labels = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" ,"25","26","27","28","29","30","31"}
+                Labels = new[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" ,"25","26","27","28","29","30","31"},
+                Foreground = System.Windows.Media.Brushes.Black,
             }
             );
             cartesianChart3.AxisY.Add(new Axis
             {
                 Title = "专注时长（分钟）",
-                MinValue = 0
+                MinValue = 0,
+                Foreground = System.Windows.Media.Brushes.Black,
 
             });
+            
             cartesianChart3.Visible = false;
             label1.Visible = true;
             label2.Visible = false;
@@ -381,6 +391,7 @@ namespace 日历
             cartesianChart2.Visible = false;
             cartesianChart3.Visible = true;
         }
+
 
     }
 }
