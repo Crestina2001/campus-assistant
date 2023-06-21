@@ -1,6 +1,6 @@
 ﻿namespace 日历
 {
-    partial class learning
+    partial class learning_word
     {
         /// <summary>
         /// Required designer variable.
