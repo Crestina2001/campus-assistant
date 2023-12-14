@@ -1,2 +1,2 @@
-# Campus-assistant
+# Intelligent Campus Assistance System
 HCI final
