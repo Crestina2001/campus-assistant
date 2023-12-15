@@ -2,10 +2,14 @@
 Developed a comprehensive intelligent campus assistance system that combined calendar, word memorization, class schedule and other functions, using .NET and PYQT technology stack
 
 ## Main page
-![image](https://github.com/Crestina2001/campus-assistant/assets/82710275/dfbceb7c-952a-4000-93d0-7e90827bdd2e)
+<div align=center>
+<image src="https://github.com/Crestina2001/campus-assistant/assets/82710275/dfbceb7c-952a-4000-93d0-7e90827bdd2e" width="800" height="555"/>
+</div>
 
 ## Focus on learning functions(YOLOV8)：Users have to keep focuing on study. An alert will sound if the user leaves the computer
-![image](https://github.com/Crestina2001/campus-assistant/assets/82710275/2eebe037-9e91-4021-aa20-9a57e788499a)
+<div align=center>
+<image src="https://github.com/Crestina2001/campus-assistant/assets/82710275/2eebe037-9e91-4021-aa20-9a57e788499a" width="800" height="555"/>
+</div>
 
 ## Garbage classification function：Input garbage images and output garbage types.
 Model training
@@ -27,10 +31,17 @@ Model training
 Accuracy when epoch=30: 93.4%
 
 Use early stopping and select the model with epoch=10
-![image](https://github.com/Crestina2001/campus-assistant/assets/82710275/c0d0574f-8504-449e-b5b8-a58382e38a66)
+<div align=center>
+<image src="https://github.com/Crestina2001/campus-assistant/assets/82710275/c0d0574f-8504-449e-b5b8-a58382e38a66" width="900" height="555"/>
+</div>
 
 ## Curriculum function
-![image](https://github.com/Crestina2001/campus-assistant/assets/82710275/8403b1f9-5522-4fc1-a6f0-5942e0bd4677)
+<div align=center>
+<image src="https://github.com/Crestina2001/campus-assistant/assets/82710275/8403b1f9-5522-4fc1-a6f0-5942e0bd4677" width="800" height="555"/>
+</div>
+
 
 ## Remember words function
-![image](https://github.com/Crestina2001/campus-assistant/assets/82710275/60a377d0-e6d7-4b59-b4d3-1d53c82e38db)
+<div align=center>
+<image src="https://github.com/Crestina2001/campus-assistant/assets/82710275/60a377d0-e6d7-4b59-b4d3-1d53c82e38db" width="800" height="555"/>
+</div>
